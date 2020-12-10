@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [formData, setFormData] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-header">
+      <form style={{ width: "300px" }} className="App-header">
+        <label>Name</label>
+        <input type="text" name="name" />
+        <label>Email</label>
+        <input type="text" name="email" />
+        <label>Message</label>
+        <textarea type="text" name="message" rows="8" />
+        <input type="submit" />
+      </form>
     </div>
   );
-}
+};
 
 export default App;
